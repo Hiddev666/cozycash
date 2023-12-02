@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend Deca', sans-serif;
+    color: #505050;
+}
+
+
+/* Header */
+.header-container {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.header-left {
+    width: 30%;
+    padding-left: 30px;
+}
+
+.header-left img {
+    width: 40%;
+}
+
+.header-right {
+    margin-left: auto;
+    padding-right: 30px;
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.header-right-wrapper {
+    text-align: end;
+}
+
+.header-name {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.header-role {
+    font-weight: 300;
+}
+/* Header */
+
+/* Content */
+.content-container {
+    width: 100%;
+    display: flex;
+}
+
+.content-left {
+    width: 75%;
+    background-color: rebeccapurple;
+}
+
+.content-right {
+    margin-left: auto;
+    width: 25%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-container {
+    border: 1px solid #505050;
+    border-radius: 15px;
+    height: 160%vh;
+    width: 90%;
+}
+
+.detail-container h3 {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.detail-transaksi-wrapper {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 88%;
+}
+
+.detail-transaksi-wrapper p {
+    /* font-weight: 300; */
+}
+
+.kode-transaksi-wrapper {
+    display: flex;
+    margin-top: 16px;
+    font-size: 13px;
+}
+
+.kode-transaksi-title {
+    font-weight: 300;
+}
+
+.kode-transaksi {
+    margin-left: auto;
+    text-align: end;
+    font-weight: 600;
+}
+
+.detail-transaksi-line {
+    font-weight: 200;
+    margin-top: 16px;
+}
+
+.total-transaksi-wrapper {
+    display: flex;
+    margin-top: 16px;
+}
+
+.total-transaksi-title {
+    font-weight: 500;
+    font-size: 17px;    
+}
+
+.total-transaksi {
+    margin-left: auto;
+    text-align: end;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.detail-forms {
+    height: 47vh;
+}
+
+.detail-form-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form1-wrapper {
+    width: 90%;
+    background-color: #F49D1A;
+}
+
+.kode-barang-input {
+    width: 80%;
+}
+
+.jumlah-barang-input {
+    width: 20%;
+}
+
+form {
+    display: flex;
+    width: 100%;
+}
+
+.form2-wrapper {
+
+}
+
+.detail-forms-btn-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.detail-forms-btn-wrapper button {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 8px;
+    background: #F49D1A;
+    border: none;   
+    color: white;
+    font-size: 15px;
+    font-weight: 700
+}
+/* Content */
