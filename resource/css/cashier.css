@@ -17,16 +17,17 @@
 
 .header-left {
     width: 30%;
-    padding-left: 30px;
+    padding-left: 50px;
 }
 
 .header-left img {
     width: 40%;
+    cursor: pointer;
 }
 
 .header-right {
     margin-left: auto;
-    padding-right: 30px;
+    padding-right: 50px;
     width: 50%;
     display: flex;
     justify-content: end;
@@ -34,6 +35,7 @@
 }
 
 .header-right-wrapper {
+    margin-right: 20px;
     text-align: end;
 }
 
@@ -45,6 +47,44 @@
 .header-role {
     font-weight: 300;
 }
+
+select {
+    width: 20px;
+}
+
+.header-right button {
+    width: 20px;
+}
+
+.header-right img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.dropdown-canvas {
+    position: fixed;
+    right:  -30%;
+    transition: .5s ease-in-out;
+    background-color: white;
+    border: 1px solid #505050;
+    width: 27%;
+    height: 100vh;
+}
+
+.dropdown-canvas button {
+    width: 40px;
+    margin-top: 30px;
+    margin-left: 30px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 8px;
+    background-color: #F49D1A;
+    border: 1px solid #505050   ;
+    cursor: pointer;
+}
+
+.dropdown-canvas button:hover {
+}
 /* Header */
 
 /* Content */
@@ -54,13 +94,81 @@
 }
 
 .content-left {
+    margin-left: 35px;
     width: 75%;
-    background-color: rebeccapurple;
+}
+
+.content-left table {
+    border: none;
+    width: 100%;
+}
+
+.content-left thead {
+    margin-bottom: 100px;
+}
+
+.content-left th {
+    font-weight: 500;
+    height: 70px;
+}
+
+.content-left tr:hover {
+    /* background-color: #eaeaea; */
+}
+
+
+.content-left td {
+    height: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.nama-barang {
+    transition: .2s ease-in-out;
+}
+
+.nama-barang:hover {
+    background-color: #F49D1A;
+    border-radius: 20px 10px 20px 10px;
+    color: white;
+    font-weight: 600;
+}
+
+.btn-decrement {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #505050;
+    background-color: transparent;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.btn-decrement:hover {
+    background-color: #F49D1A;
+}
+
+.btn-increment {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #505050;
+    background-color: transparent;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.btn-increment:hover {
+    background-color: #F49D1A;
 }
 
 .content-right {
     margin-left: auto;
     width: 25%;
+    margin-right: 35px;
     height: 80vh;
     display: flex;
     align-items: center;
@@ -68,22 +176,40 @@
 }
 
 .detail-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border: 1px solid #505050;
     border-radius: 15px;
-    height: 160%vh;
+    height: 80vh;
     width: 90%;
 }
 
-.detail-container h3 {
+.header-detail {
+    display: flex;
     margin-top: 20px;
-    margin-left: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time-wrapper {
+    text-align: end;
+    font-weight: 200;
+}
+
+
+.header-detail p {
+    font-weight: 300;
+    font-size: 13px;
+}
+
+.detail-container h3 {
     font-weight: 600;
     font-size: 25px;
 }
 
 .detail-transaksi-wrapper {
     margin-left: 20px;
-    margin-top: 20px;
     width: 88%;
 }
 
@@ -129,8 +255,14 @@
     font-size: 20px;
 }
 
+.detail-forms-outer {
+    display: flex;
+    align-items: end;
+}
+
 .detail-forms {
-    height: 47vh;
+    width: 100%;
+    margin-bottom: 25px;
 }
 
 .detail-form-wrapper {
@@ -139,17 +271,54 @@
     justify-content: center;
 }
 
+input {
+    border-radius: 6px;
+    border: 1px solid #7a7a7a;
+}
+
+input:focus {
+    outline: none;
+    
+}
+
 .form1-wrapper {
     width: 90%;
-    background-color: #F49D1A;
+}
+
+.kode-barang-input-wrapper {
+    width: 75%;
+}
+
+.kode-barang-input-wrapper p {
+    font-size: 13px;
+    font-weight: 300;
+    margin-bottom: 5px;
 }
 
 .kode-barang-input {
-    width: 80%;
+    padding: 5px;
+    font-weight: 300;
+    width: 95%;
 }
 
+.jumlah-barang-input-wrapper {
+    margin-left: 15px;
+    width: 15%;
+}
+
+.jumlah-barang-input-wrapper p {
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+
 .jumlah-barang-input {
-    width: 20%;
+    padding: 5px;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
 }
 
 form {
@@ -158,7 +327,30 @@ form {
 }
 
 .form2-wrapper {
+    margin-top: 15px;
+    width: 90%;
+}
 
+.tunai-wrapper {
+    width: 95%;
+}
+
+.tunai-wrapper p {
+    font-size: 13px;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+.tunai {
+    padding: 5px;
+    font-weight: 400;
+    width: 100%;
+}
+
+.tunai-input {
+    padding: 5px;
+    font-weight: 300;
+    width: 100%;
 }
 
 .detail-forms-btn-wrapper {
@@ -166,19 +358,27 @@ form {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .detail-forms-btn-wrapper button {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px;
+    padding: 13px;
     border-radius: 8px;
     background: #F49D1A;
+    transition: .2s ease-in-out;
+    cursor: pointer;
     border: none;   
     color: white;
     font-size: 15px;
     font-weight: 700
 }
+
+.detail-forms-btn-wrapper button:hover {
+    /* border-left: 5px solid #505050; */
+    border-bottom: 5px solid #c1780b;
+}
+
 /* Content */
