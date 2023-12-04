@@ -15,7 +15,14 @@
 <body>
 
 <div class="dropdown-canvas" id="canvas">
-    <button id="dropdownhide" onclick="dropdownHide()">x</button>
+    <div class="dropdown-header-right-wrapper">
+        <button id="dropdownhide" onclick="dropdownHide()" class="btn-dropdown-close">x</button>
+        <div>
+            <p class="header-name">Wahid Abdul</p>
+            <p class="header-role">Kasir</p>
+        </div>
+    </div>
+    <button class="btn-logout">Logout</button>
 </div>
 
 <!-- Header Start -->
@@ -173,8 +180,8 @@
 
 <!-- JavaScript -->
 <script src="bootstrap/bootstrap.bundle.min.js"></script>
-<script src="jquery-3.3.1.min.js"></script>
-<script src="sweetalert.min.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/sweetalert.min.js"></script>
 <script src="js/cashier.js"></script>
 
 </body>
