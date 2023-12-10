@@ -1,17 +1,14 @@
 <?php
 
-$env = parse_ini_file("../.env");
+$server = "localhost";
+$username = "root";
+$password = "";
+$db_name = "cozycash";
 
-$conn = mysqli_connect(
-    $env["DB_SERVER"],
-    $env["DB_USERNAME"],
-    $env["DB_PASSWORD"],
-    $env["DB_NAME"],
-);
+$conn = mysqli_connect($server, $username, $password, $db_name);
 
 if(!$conn) {
-    echo "Database Connection Error!";
-    die();
+    echo "connection failed";
 }
 
 ?>
