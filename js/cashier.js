@@ -27,8 +27,8 @@ function test() {
 
 function logoutConfirm() {
     swal({
-        title: "Are you sure?",
-        text: "Are you sure that you want to leave this page?",
+        title: "Yakin ingin Logout?",
+        text: "Klik OK untuk melanjutkan!",
         icon: "warning",
         dangerMode: true,
       })

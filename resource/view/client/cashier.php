@@ -1,10 +1,11 @@
 <?php 
 include "../../../config/database.php";
+require_once('control/cashier-control.php');
 session_start();
 
-// if(!isset($_SESSION['username'])) {
-//     header("Location: ../login.php");
-// }
+$cashier = new Cashier();
+$cashier->isLogin();
+
 ?>
 
 <!DOCTYPE html>
@@ -25,8 +26,8 @@ session_start();
     <div class="dropdown-header-right-wrapper">
         <button id="dropdownhide" onclick="dropdownHide()" class="btn-dropdown-close">x</button>
         <div>
-            <p class="header-name">Wahid Abdul</p>
-            <p class="header-role">Kasir</p>
+            <p class="header-name"><?= $_SESSION['username-login']?></p>
+            <p class="header-role"><?= $_SESSION['role-login']?>    </p>
         </div>
     </div>
     <button class="btn-logout" onclick="logoutConfirm()">Logout</button>
@@ -68,14 +69,14 @@ session_start();
                 <div class="detail-forms">
                     <div class="detail-form-wrapper">
                             <div class="form1-wrapper">
-                                <form action="">
+                                <form action="client-control.php" method="POST">
                                     <div class="kode-barang-input-wrapper">
                                         <p>Kode Barang</p>
-                                        <input type="text" class="kode-barang-input" autofocus>
+                                        <input type="text" class="kode-barang-input" autofocus name="kode-barang">
                                     </div>
                                     <div class="jumlah-barang-input-wrapper">
                                         <p>Jumlah</p>
-                                        <input type="text" class="jumlah-barang-input">
+                                        <input type="text" class="jumlah-barang-input" name="jumlah-barang">
                                     </div>
                                     <input type="submit" style="visibility: hidden; width: 0;" />
                                 </form>
@@ -94,7 +95,7 @@ session_start();
                             </div>
                         </div>
                         <div class="detail-forms-btn-wrapper">
-                            <form action="client-control.php" method="GET">
+                            <form action="client-control.php" method="POST">
                                 <button onclick="test()" type="submit" name="btn-bayar">Bayar</button>
                             </form>
                         </div>

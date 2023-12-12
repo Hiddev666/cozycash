@@ -2,9 +2,9 @@
 session_start();
 include "../../../config/database.php";
 
-$invoice_id = $_SESSION['invoice_id'];
+$invoice_id = (int)$_SESSION['invoice_id'];
 
-$totalQuery = mysqli_query($conn, "SELECT SUM(products.unit_price) as total FROM cozycash.products inner join cozycash.sales on products.product_id = sales.product_id inner join cozycash.invoices on sales.invoice_id = invoices.invoice_id where invoices.invoice_id=1;");
+$totalQuery = mysqli_query($conn, "SELECT SUM(products.unit_price) as total FROM cozycash.products inner join cozycash.sales on products.product_id = sales.product_id inner join cozycash.invoices on sales.invoice_id = invoices.invoice_id where invoices.invoice_id=$invoice_id;");
 $total ="Rp " . number_format(mysqli_fetch_column($totalQuery),2,',','.');
 
 ?>
