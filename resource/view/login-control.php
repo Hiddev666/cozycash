@@ -36,6 +36,10 @@ if($numrows != 0) {
         $invoiceIdArray = mysqli_fetch_array($invoiceIdQuery);
         $_SESSION['invoice_id'] = $invoiceIdArray['invoice_id'];
 
+        if(isset($_SESSION['tunai'])) {
+            unset($_SESSION['tunai']);
+        }
+
         header("Location: client/cashier.php");
     } else {
         header("Location: admin/admin.php");

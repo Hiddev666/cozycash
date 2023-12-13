@@ -85,10 +85,14 @@ $cashier->isLogin();
                         
                     <div class="detail-form-wrapper">
                         <div class="form2-wrapper">
-                                <form action="">
+                        <!-- <div>Tanpa Rupiah:</div>
+    <input type="text" id="tanpa-rupiah"/>
+    <div>Dengan Rp:</div>
+    <input type="text" id="dengan-rupiah"/> -->
+                                <form action="client-control.php" method="POST">
                                     <div class="tunai-wrapper">
                                         <p>Tunai</p>
-                                        <input type="text" class="tunai-input" autofocus>
+                                        <input type="text" class="tunai-input" autofocus name="tunai" id="tunai">
                                     </div>
                                     <input type="submit" style="visibility: hidden; width: 0;" />
                                 </form>

@@ -20,8 +20,13 @@ if(isset($_POST['kode-barang'])) {
     if($count == "") {
         $count = 1;
     }
-
     $cashier->inputProduct($invoiceid, $productcode, $count);
+}
+
+if(isset($_POST['tunai'])) {
+    include "../../../config/database.php";
+    $tunai = (int)str_replace('.', '', $_POST['tunai']);
+    $cashier->hitungKembalian($tunai);
 }
 
 ?>

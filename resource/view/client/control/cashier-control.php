@@ -56,6 +56,14 @@ class Cashier {
         }
     }
 
+    public function hitungKembalian($tunai) {
+        session_start();
+        include "../../../config/database.php";
+
+        $_SESSION['tunai'] = $tunai;
+        header("Location: cashier.php");
+    }
+
     public function isLogin() {
         session_start();
         if(!isset($_SESSION['username-login'])) {
