@@ -16,9 +16,20 @@ function detail() {
     xhttp.send();
 }
 
+function clock()  {
+    let date = new Date(); 
+    let hh = date.getHours();
+    let mm = date.getMinutes();
+    let ss = date.getSeconds();
+
+    let text = document.getElementById('time')
+    text.innerHTML = `${hh}:${mm}:${ss}`
+}
+
 setInterval(() => {
     table();
     detail()
+    clock();
 }, 1000);
 
 function test() {

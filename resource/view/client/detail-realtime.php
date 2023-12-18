@@ -24,10 +24,6 @@ $discountedFormated = "Rp " . number_format($discounted,0,',','.');
 <div class="detail-transaksi-wrapper">
                 <div class="header-detail">
                     <h3>Transaksi</h3>
-                    <div class="time-wrapper">
-                    <p id="date">ads</p>
-                    <p class="time" id="time">00:00:00</p>
-                    </div>
                 </div>
                 <div class="kode-transaksi-wrapper">
                     <p class="kode-transaksi-title">Kode Transaksi</p>

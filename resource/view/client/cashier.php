@@ -23,6 +23,7 @@ $cashier->isLogin();
 <body>
 
 <div class="dropdown-canvas" id="canvas">
+    
     <div class="dropdown-header-right-wrapper">
         <button id="dropdownhide" onclick="dropdownHide()" class="btn-dropdown-close">x</button>
         <div>
@@ -37,6 +38,7 @@ $cashier->isLogin();
 <div class="header-container">
     <div class="header-left">
         <img src="../../img/logo.svg" alt="">
+        <p id="time" class="time">00:00:00</p>
     </div>
     <div class="header-right">
         <div class="header-right-wrapper">

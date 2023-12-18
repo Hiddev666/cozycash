@@ -17,6 +17,7 @@ if(isset($_POST['kode-barang'])) {
     $productcode = $_POST['kode-barang'];
     $count = $_POST['jumlah-barang'];
 
+    
     if($count == "") {
         $count = 1;
     }

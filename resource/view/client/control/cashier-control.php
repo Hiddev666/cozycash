@@ -29,19 +29,18 @@ class Cashier {
     public function inputProduct($invoiceid, $productcode, $count) {
         session_start();
         include "../../../config/database.php";
-
         $queryProduct = mysqli_query($conn, "SELECT * FROM products WHERE product_code='$productcode';");
         $queryProductArray = mysqli_fetch_array($queryProduct);
         if(mysqli_num_rows($queryProduct) != 0) {
             $defaultcount = 1;
             for($defaultcount; $defaultcount <= $count; $defaultcount++) {
-                $timestamp = date("ymd");
+                $timestamp = date("Y-m-d");
                 $stmt = mysqli_prepare($conn, "INSERT INTO sales VALUES (?, ?, ?, ?)");
                 
                 $sales_id = NULL;
                 $invoice_id = (int)$invoiceid;
                 $product_id = (int)$queryProductArray['product_id'];
-                $date_recorded = NULL;
+                $date_recorded = $timestamp;
 
                 mysqli_stmt_bind_param($stmt, "ssss", $sales_id, $invoice_id, $product_id, $date_recorded);                
                 
