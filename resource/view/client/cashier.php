@@ -4,6 +4,7 @@ require_once('control/cashier-control.php');
 session_start();
 
 $cashier = new Cashier();
+$cashier->checkAuth();
 $cashier->isLogin();
 
 ?>

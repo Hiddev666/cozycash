@@ -22,10 +22,35 @@ function setActivePage($page) {
     }
 }
 
+function setActiveStats($stats) {
+    if($_GET['statstype'] == $stats) {
+        echo "-active";
+    }
+}
+
 function checkLastStats($month) {
     if($_POST['stats'] == $month) {
         return "selected";
     }    
+}
+
+function checkLastStatsYear($year) {
+    if($_POST['statsyear'] == $year) {
+        return "selected";
+    }    
+}
+
+function checkAuth() {
+    $role = $_SESSION['role-login'];
+
+    if($role != "admin") {
+        header("Location: ../err/not-permitted.php");
+    }
+}
+
+function logout() {
+    session_destroy();
+    header("Location: login.php");
 }
 
 ?>

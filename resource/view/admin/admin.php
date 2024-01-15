@@ -2,7 +2,9 @@
 include "admin-control.php";
 session_start();
 
+checkAuth();
 withoutParamsRedirect()
+
 
 ?>
 
@@ -33,7 +35,7 @@ withoutParamsRedirect()
 
 
 
-<script src="../../../js/admin.js"></script>
+<script src="admin.js"></script>
 
 </body>
 </html>

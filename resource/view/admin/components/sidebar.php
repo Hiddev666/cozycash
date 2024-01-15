@@ -24,5 +24,10 @@
                 <p>Units</p>
             </div>
         </a>
+        <a href="../logout-control.php">
+            <div class="menu-wrapper<?= setActivePage("units")?>">
+                <p>Logout</p>
+            </div>
+        </a>
     </div>
 </div>

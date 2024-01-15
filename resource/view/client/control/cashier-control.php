@@ -6,6 +6,9 @@ class Cashier {
     public function bayar() {
         session_start();
         include "../../../config/database.php";
+        
+        $invoiceid = (int)$_SESSION['invoice_id'];
+
         $timestamp = date("ymd");
         $stmt = mysqli_prepare($conn, "INSERT INTO invoices VALUES (?, ?, ?)");
 
@@ -20,10 +23,10 @@ class Cashier {
         $invoiceIdQuery = mysqli_query($conn, "SELECT * FROM invoices ORDER BY invoice_id DESC");
         $invoiceIdArray = mysqli_fetch_array($invoiceIdQuery);
         $_SESSION['invoice_id'] = $invoiceIdArray['invoice_id'];
-        // Redirect
-        // if (isset($_SERVER["HTTP_REFERER"])) {
-        //     header("Location: " . $_SERVER["HTTP_REFERER"]);
-        // }
+
+        if (isset($_SERVER["HTTP_REFERER"])) {
+            header("Location: " . $_SERVER["HTTP_REFERER"]);
+        }
     }
 
     public function inputProduct($invoiceid, $productcode, $count) {
@@ -67,6 +70,14 @@ class Cashier {
         session_start();
         if(!isset($_SESSION['username-login'])) {
             header("Location: ../login.php");
+        }
+    }
+
+    function checkAuth() {
+        $role = $_SESSION['role-login'];
+        
+        if($role != "Kasir") {
+            header("Location: ../err/not-permitted.php");
         }
     }
 
