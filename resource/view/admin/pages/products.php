@@ -1,31 +1,13 @@
-<?php
-
-function weekOfMonth($date) {
-    //Get the first day of the month.
-    $firstOfMonth = strtotime(date("Y-m-01", $date));
-    //Apply above formula.
-    return weekOfYear($date) - weekOfYear($firstOfMonth) + 1;
-}
-
-function weekOfYear($date) {
-    $weekOfYear = intval(date("W", $date));
-    if (date('n', $date) == "1" && $weekOfYear > 51) {
-        // It's the last week of the previos year.
-        return 0;
-    }
-    else if (date('n', $date) == "12" && $weekOfYear == 1) {
-        // It's the first week of the next year.
-        return 53;
-    }
-    else {
-        // It's a "normal" week.
-        return $weekOfYear;
-    }
-}
-
-// A few test cases.
-echo weekOfMonth(strtotime("2022-12-18")) . " "; // 2
-// echo weekOfMonth(strtotime("2020-12-31")) . " "; // 5
-// echo weekOfMonth(strtotime("2020-01-02")) . " "; // 1
-// echo weekOfMonth(strtotime("2021-01-28")) . " "; // 5
-// echo weekOfMonth(strtotime("2018-12-31")) . " "; // 6
+<div class="products">
+    <div class="products-container">
+        <div class="products-header">
+            <p>Products</p>
+        </div>
+        <table>
+            <thead>
+                <th>Kode Barang</th>
+                <th>Nama Barang</th>
+            </thead>
+        </table>
+    </div>
+</div>
